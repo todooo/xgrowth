@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>xgrowth — you're in</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="config.js"></script>
+</head>
+<body><div class="wrap">
+<nav class="top"><a class="logo" href="index.html">x<b>growth</b>.lol</a></nav>
+<section class="prose" style="padding-block:72px">
+<div class="eyebrow">Payment received</div>
+<h1 style="margin-top:12px">You're in.</h1>
+<p class="lede" style="margin-top:16px">Your receipt and invoice are on their way from Stripe. Here is what happens next.</p>
+<div class="grid3" style="margin-top:28px">
+  <div class="tile step"><div class="n">STARTER</div><h3>Open the members page</h3><p>Today's list is already there. Bookmark it; it updates every morning.</p><p style="margin-top:12px"><a class="btn hot" id="members" href="#">Open members page</a></p></div>
+  <div class="tile step"><div class="n">COACH</div><h3>Book your first session</h3><p>Pick a weekly slot in your timezone. Bring your account and one goal.</p><p style="margin-top:12px"><a class="btn" id="book" href="#">Book a slot</a></p></div>
+  <div class="tile step"><div class="n">PERSONAL</div><h3>Voice interview</h3><p>Book the 45-minute interview. We'll email you a short questionnaire before it.</p><p style="margin-top:12px"><a class="btn" id="book2" href="#">Book the interview</a></p></div>
+</div>
+<p style="margin-top:28px;color:var(--muted);font-size:14px">Questions: <a id="mail" href="mailto:hello@xgrowth.lol">hello@xgrowth.lol</a></p>
+</section>
+</div>
+<script>
+var c=window.XG||{};
+document.getElementById('members').href=c.membersUrl||'#';
+document.getElementById('book').href=c.bookingUrl||'#';
+document.getElementById('book2').href=c.bookingUrl||'#';
+if(c.contactEmail){var m=document.getElementById('mail');m.href='mailto:'+c.contactEmail;m.textContent=c.contactEmail;}
+</script>
+</body></html>
