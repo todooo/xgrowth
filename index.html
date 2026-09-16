@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="style.css">
 <script src="config.js"></script>
+<script src="https://app.lemonsqueezy.com/js/lemon.js" defer></script>
 </head>
 <body>
 <div class="wrap">
@@ -83,7 +84,7 @@
 <section id="pricing">
   <div class="eyebrow">Pricing</div>
   <h2 style="margin-top:10px">Pick how much help you want.</h2>
-  <p class="lede" style="margin-top:14px">All plans are monthly, billed in euro through Stripe. VAT is added at checkout where it applies. Cancel in one click.</p>
+  <p class="lede" style="margin-top:14px">All plans are monthly, billed in euro. Checkout and invoices are handled by Lemon Squeezy, so VAT is sorted automatically wherever you are. Cancel in one click.</p>
   <div class="pricing">
     <div class="tile plan">
       <div class="name">Starter</div>
@@ -139,7 +140,7 @@
     <details><summary>What's in the daily playbook exactly?</summary><p>Three parts. Posts to answer: 5 to 8, each with who posted, why it will grow, a one-line brief for your reply, and how long the window is open. Trends: any format taking off, with the template and how to reproduce it. Post today: one idea with hook and format. Updated every morning European time and again at noon, so open it whenever suits you.</p></details>
     <details><summary>I'm not a founder. Is it for me?</summary><p>Yes if you sell to founders, developers or marketers, or want to be seen by them. Designers, devrel, agency owners and freelancers use the same lists.</p></details>
     <details><summary>How does the €499 plan work?</summary><p>Week one: a 45-minute voice interview and a look at your product. Then you get 30 posts for the month in a shared doc, in batches, edited with you. You post them or schedule them. We track what worked and adjust next month.</p></details>
-    <details><summary>Invoices, VAT, cancelling?</summary><p>Stripe handles payment, invoices and EU VAT. You can cancel from the link in your receipt email; access stays until the end of the paid month. Business customers can add a VAT ID at checkout.</p></details>
+    <details><summary>Invoices, VAT, cancelling?</summary><p>Payments run through Lemon Squeezy, the merchant of record: they charge the right VAT for your country, send the invoice, and give you a customer portal to cancel or change plan. Access stays until the end of the paid month. Business customers can add a VAT ID at checkout.</p></details>
   </div>
 </section>
 
@@ -169,9 +170,13 @@
 (function(){
   var c=window.XG||{};
   document.querySelectorAll('[data-plan]').forEach(function(a){
-    var url=(c.stripe||{})[a.dataset.plan];
-    if(url && url.indexOf('REPLACE')<0){ a.href=url; a.rel='noopener'; }
-    else { a.addEventListener('click',function(e){ e.preventDefault(); alert('Payment link not configured yet. Edit config.js.'); }); }
+    var url=(c.checkout||{})[a.dataset.plan];
+    if(url && url.indexOf('REPLACE')<0){
+      a.href=url; a.rel='noopener';
+      if(c.overlay){ a.classList.add('lemonsqueezy-button'); }
+    } else {
+      a.addEventListener('click',function(e){ e.preventDefault(); alert('Checkout link not configured yet. Edit config.js.'); });
+    }
   });
   if(c.contactEmail){ var m=document.getElementById('mail'); m.href='mailto:'+c.contactEmail; m.textContent=c.contactEmail; }
   if(c.xHandle){ var x=document.getElementById('xlink'); x.href='https://x.com/'+c.xHandle; x.textContent='@'+c.xHandle; }
