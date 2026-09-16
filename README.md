@@ -17,9 +17,9 @@ Static site: landing page with three Stripe-billed plans, a trend-data graph pag
 4. Paste the three link URLs into `config.js`. Commit and push; the site redeploys.
 
 ## Deploy
-Production is **Vercel**, project `todooo1s-projects/xgrowth`, fed by `main` on github.com/todooo/xgrowth (every push redeploys). Manual deploy from this folder: `vercel deploy --prod`.
+Production is **Vercel**, project `todooo1s-projects/xgrowth`, fed by `main` on github.com/todooo/xgrowth (connect the repo in the Vercel dashboard (Project → Settings → Git) so every push redeploys; until then deploy with the CLI). Manual deploy from this folder: `vercel deploy --prod`.
 
-- Production URL: https://xgrowth.vercel.app
+- Production URL: https://xgrowth-nine.vercel.app
 - Custom domain `xgrowth.lol` is attached to the project. DNS at the registrar:
 
 | type  | host | value |
