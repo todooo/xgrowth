@@ -17,23 +17,19 @@ Static site: landing page with three Stripe-billed plans, a trend-data graph pag
 4. Paste the three link URLs into `config.js`. Commit and push; the site redeploys.
 
 ## Deploy
-Two targets, both fed by `main`:
-- **GitHub Pages** → configured with custom domain `xgrowth.lol` (the `CNAME` file). Live at https://todooo.github.io/xgrowth/ until DNS points at GitHub.
-- **Vercel** (optional, same as princessbid): import the repo at vercel.com/new, framework "Other", no build settings. Add the domain under Project → Settings → Domains.
+Production is **Vercel**, project `todooo1s-projects/xgrowth`, fed by `main` on github.com/todooo/xgrowth (every push redeploys). Manual deploy from this folder: `vercel deploy --prod`.
 
-DNS at the registrar for GitHub Pages:
+- Production URL: https://xgrowth.vercel.app
+- Custom domain `xgrowth.lol` is attached to the project. DNS at the registrar:
 
 | type  | host | value |
 |-------|------|-------|
-| A     | @    | 185.199.108.153 |
-| A     | @    | 185.199.109.153 |
-| A     | @    | 185.199.110.153 |
-| A     | @    | 185.199.111.153 |
-| CNAME | www  | `todooo.github.io.` |
+| A     | @    | 76.76.21.21 |
+| CNAME | www  | cname.vercel-dns.com. |
 
-For Vercel instead: A `@` → `76.76.21.21`, CNAME `www` → `cname.vercel-dns.com.` (use the records the Vercel domain page prints).
+Or point the domain's nameservers to `ns1.vercel-dns.com` and `ns2.vercel-dns.com` and let Vercel manage DNS. Vercel issues the HTTPS certificate automatically once DNS resolves. Check status: `vercel domains inspect xgrowth.lol`.
 
-After DNS resolves, in the repo Settings → Pages tick **Enforce HTTPS**.
+GitHub Pages (https://todooo.github.io/xgrowth/) is also enabled on the repo as a backup; it has no custom domain.
 
 ## Local preview
 `python3 -m http.server 8766` inside this folder, then open http://localhost:8766/.
