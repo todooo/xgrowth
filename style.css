@@ -35,6 +35,10 @@ nav.top a:not(.logo):hover{color:var(--ink)}
 section{padding-block:56px}
 section+section{border-top:1px solid var(--line)}
 .hero{padding-block:72px 48px;display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
+.playbook{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:17px;color:var(--ink-2)}
+.playbook li{display:grid;grid-template-columns:22px 1fr;gap:10px}
+.playbook li::before{content:"→";color:var(--hot);font-weight:700}
+.playbook b{color:var(--ink);font-weight:600}
 .hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
 .hero .fine{margin-top:14px;font-size:13px;color:var(--muted)}
 .tile{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
