@@ -17,6 +17,10 @@
     {
       "source": "/map",
       "destination": "/graph"
+    },
+    {
+      "source": "/founders",
+      "destination": "/graph"
     }
   ]
 }
