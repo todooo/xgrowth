@@ -20,7 +20,7 @@
       '<div class="wl-in"><span>@</span><input id="wl-handle" name="handle" inputmode="text" maxlength="30" placeholder="yourhandle" required></div>'+
       '<button type="submit" class="btn hot">Join the waitlist</button></form>'+
       '<div class="wl-err" hidden>That doesn\'t look like an X handle. Letters, numbers and _ only.</div>'+
-      '<div class="wl-ok" hidden><b>You\'re on the list.</b> We\'ll DM <span class="wl-h"></span> on X when your spot opens. Meanwhile, the <a href="graph.html">map</a> shows what the trend looked like.</div>'+
+      '<div class="wl-ok" hidden><b>You\'re on the list.</b> We\'ll DM <span class="wl-h"></span> on X when your spot opens. Meanwhile, the <a href="/map">map</a> shows what the trend looked like.</div>'+
       '</div>';
     document.body.appendChild(d); document.body.style.overflow='hidden';
     var close=function(){ d.remove(); document.body.style.overflow=''; };

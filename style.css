@@ -84,7 +84,7 @@ section+section{border-top:1px solid var(--line)}
 .faq details[open] summary::after{content:"–"}
 .faq p{margin-top:10px;color:var(--ink-2);font-size:15px}
 .founder{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;margin-top:26px}
-.founder .av{width:72px;height:72px;border-radius:50%;background:var(--hot-soft);display:grid;place-items:center;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;color:var(--hot-ink);font-size:24px}
+.founder .av{width:72px;height:72px;border-radius:50%;object-fit:cover;background:var(--hot-soft)}
 .founder p{color:var(--ink-2);max-width:62ch}
 footer{border-top:1px solid var(--line);padding-top:24px;margin-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;font-size:13px;color:var(--muted)}
 footer ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
