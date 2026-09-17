@@ -131,3 +131,4 @@ footer a{color:var(--muted)}
 @media (max-width:600px){.xpost{padding:14px}.xfoot{gap:14px}}
 .tip .open{margin-top:8px;color:var(--hot-ink);font-weight:600}
 @media (max-width:640px){.card{overflow-x:auto;-webkit-overflow-scrolling:touch}#chart{min-width:760px;display:block}.tip{max-width:260px}}
+.madeby{display:inline-flex;align-items:center;gap:8px;margin:14px 0 0;font-size:14px;color:var(--ink-2);text-decoration:none}.madeby .av{width:24px;height:24px;border-radius:50%;object-fit:cover}.madeby b{color:var(--ink);font-weight:600}.madeby:hover b{color:var(--hot-ink)}
