@@ -16,7 +16,7 @@
   "rewrites": [
     {
       "source": "/map",
-      "destination": "/graph.html"
+      "destination": "/graph"
     }
   ]
 }
