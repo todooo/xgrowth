@@ -9,6 +9,10 @@ window.XG = {
     coach:    "https://REPLACE.lemonsqueezy.com/buy/REPLACE_COACH",
     personal: "https://REPLACE.lemonsqueezy.com/buy/REPLACE_PERSONAL",
   },
+  // Waitlist mode: tapping a plan asks for the X handle and saves it (no checkout). Set false once checkout links are live.
+  waitlist: true,
+  // Google Analytics 4 measurement ID (G-XXXXXXXXXX). Leave empty to disable.
+  gaId: "",
   // true = open checkout as an overlay on the page (needs lemon.js, already included); false = go to the checkout page
   overlay: true,
   // Where the members-only playbook lives after purchase (Notion, a gated page, etc.)

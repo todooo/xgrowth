@@ -100,3 +100,19 @@ footer a{color:var(--muted)}
   nav.top ul{display:none}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* waitlist dialog */
+.wl{position:fixed;inset:0;background:rgba(18,20,26,.55);display:grid;place-items:center;padding:16px;z-index:50}
+.wl-box{position:relative;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);width:min(440px,100%);padding:28px 26px 24px}
+.wl-box h3{font-size:26px;margin:8px 0 10px}
+.wl-p{color:var(--ink-2);font-size:15px}
+.wl-x{position:absolute;top:10px;right:12px;border:0;background:none;font-size:26px;line-height:1;color:var(--muted);cursor:pointer;padding:4px 8px}
+.wl-f{display:flex;flex-direction:column;gap:12px;margin-top:18px}
+.wl-in{display:flex;align-items:center;border:1px solid var(--line);border-radius:10px;background:var(--bg);padding:0 12px}
+.wl-in span{color:var(--muted);font-weight:600}
+.wl-in input{flex:1;border:0;background:none;padding:12px 8px;font:16px "IBM Plex Sans",sans-serif;color:var(--ink);outline:none;min-width:0}
+.wl-in:focus-within{border-color:var(--hot)}
+.wl-err{margin-top:10px;font-size:13px;color:var(--hot-ink)}
+.wl-ok{margin-top:14px;font-size:15px;color:var(--ink-2);line-height:1.5}
+.wl-ok b{color:var(--ink)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}

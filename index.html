@@ -173,21 +173,6 @@
 </footer>
 
 </div>
-<script>
-(function(){
-  var c=window.XG||{};
-  document.querySelectorAll('[data-plan]').forEach(function(a){
-    var url=(c.checkout||{})[a.dataset.plan];
-    if(url && url.indexOf('REPLACE')<0){
-      a.href=url; a.rel='noopener';
-      if(c.overlay){ a.classList.add('lemonsqueezy-button'); }
-    } else {
-      a.addEventListener('click',function(e){ e.preventDefault(); alert('Checkout link not configured yet. Edit config.js.'); });
-    }
-  });
-  if(c.contactEmail){ var m=document.getElementById('mail'); m.href='mailto:'+c.contactEmail; m.textContent=c.contactEmail; }
-  if(c.xHandle){ var x=document.getElementById('xlink'); x.href='https://x.com/'+c.xHandle; x.textContent='@'+c.xHandle; }
-})();
-</script>
+<script src="site.js"></script>
 </body>
 </html>
