@@ -130,3 +130,4 @@ footer a{color:var(--muted)}
 .xfollow{margin-left:auto;background:var(--ink);color:var(--bg);border-radius:999px;padding:5px 14px;font-weight:600;font-size:13px}
 @media (max-width:600px){.xpost{padding:14px}.xfoot{gap:14px}}
 .tip .open{margin-top:8px;color:var(--hot-ink);font-weight:600}
+@media (max-width:640px){.card{overflow-x:auto;-webkit-overflow-scrolling:touch}#chart{min-width:760px;display:block}.tip{max-width:260px}}
