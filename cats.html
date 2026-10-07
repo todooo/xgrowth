@@ -54,7 +54,10 @@
 var CATS=[
   {co:"Mistral AI",x:"MistralAI",founder:"arthurmensch",img:"cats/mistral.jpg",alt:"A chonky ginger cat walking past a giant orange pixel Mistral M in a museum",
    rel:"<b>Mistral Large 4 “Le Chonk”</b>: 1.05T-parameter open-weight MoE, 49B active, 1M-token context. API preview now, weights due Oct 31.",
-   date:"Oct 6",src:"https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/"}
+   date:"Oct 6",src:"https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/"},
+  {co:"Smoothie",founder:"mubeenchatthaa",img:"cats/smoothie.jpg",alt:"Smoothie, a grey Scottish Fold, asleep on a plaid pillow",
+   rel:"Latest launch: <b>People by Sniff</b> 🌿",
+   date:"Oct 7",src:"https://x.com/mubeenchatthaa/status/2107912601921618379"}
 ];
 var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});};
 var ol=document.getElementById('cats'),html='';
@@ -67,7 +70,7 @@ for(var i=0;i<50;i++){
   var ph=c.img?'<img src="'+esc(c.img)+'" alt="'+esc(c.alt||c.co+' cat')+'"'+(n>1?' loading="lazy"':'')+'>':'<span class="em">🐈</span>';
   html+='<li class="cat"><div class="ph'+(c.img?'':' soon')+'"><span class="rk">#'+n+'</span>'+ph+'</div>'+
     '<div class="body"><div class="co">'+esc(c.co)+'</div>'+
-    '<div class="who"><a href="https://x.com/'+esc(c.x)+'" target="_blank" rel="noopener">@'+esc(c.x)+'</a> · founder <a href="https://x.com/'+esc(c.founder)+'" target="_blank" rel="noopener">@'+esc(c.founder)+'</a></div>'+
+    '<div class="who">'+(c.x?'<a href="https://x.com/'+esc(c.x)+'" target="_blank" rel="noopener">@'+esc(c.x)+'</a> · ':'')+'founder <a href="https://x.com/'+esc(c.founder)+'" target="_blank" rel="noopener">@'+esc(c.founder)+'</a></div>'+
     '<div class="rel">'+c.rel+'</div>'+
     '<div class="meta"><span>'+esc(c.date)+(c.img?'':' · cat photo soon')+'</span><a href="'+esc(c.src)+'" target="_blank" rel="noopener">source ↗</a></div></div></li>';
 }
