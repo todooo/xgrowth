@@ -13,6 +13,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://xrocket.lol/cats</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://xrocket.lol/legal</loc>
     <lastmod>2026-09-28</lastmod>
     <changefreq>yearly</changefreq>

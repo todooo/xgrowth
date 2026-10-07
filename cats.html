@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://xrocket.lol/cats">
+<title>xrocket — Top 50 founder cats of X</title>
+<meta name="description" content="The top 50 founder cats of X, each one dressed up as its company's latest release.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Top 50 founder cats of X">
+<meta property="og:description" content="Every company ships. Every company has a cat. #1: Mistral Large 4, aka Le Chonk.">
+<meta property="og:image" content="https://xrocket.lol/cats/mistral.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@chiefkittenme">
+<meta name="twitter:title" content="Top 50 founder cats of X">
+<meta name="twitter:description" content="Every company ships. Every company has a cat. #1: Mistral Large 4, aka Le Chonk.">
+<meta name="twitter:image" content="https://xrocket.lol/cats/mistral.jpg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="config.js"></script>
+<script defer src="/_vercel/insights/script.js"></script>
+<script src="site.js" defer></script>
+<style>
+.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin-top:28px;list-style:none;padding:0}
+.cat{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.cat.top{grid-column:1/-1;display:grid;grid-template-columns:1.5fr 1fr;box-shadow:var(--shadow);border-color:var(--hot)}
+.cat .ph{position:relative;aspect-ratio:16/9;background:var(--grid);display:grid;place-items:center;overflow:hidden}
+.cat.top .ph{aspect-ratio:auto;min-height:100%}
+.cat .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.cat .ph .em{font-size:44px;font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;opacity:.35}
+.cat .ph.soon{background:repeating-linear-gradient(135deg,var(--grid) 0 10px,var(--bg) 10px 20px)}
+.cat .rk{position:absolute;top:10px;left:10px;background:var(--ink);color:var(--bg);font:500 12px "IBM Plex Mono",monospace;padding:3px 8px;border-radius:999px}
+.cat.top .rk{background:var(--hot);color:#fff;font-size:14px;padding:4px 11px}
+.cat .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px}
+.cat.top .body{padding:26px 26px 26px;gap:10px;justify-content:center}
+.cat .co{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:19px;letter-spacing:-.01em;line-height:1.15}
+.cat.top .co{font-size:clamp(26px,3vw,36px)}
+.cat .who{font-size:13px;color:var(--muted)}
+.cat .who a{color:var(--hot-ink);text-decoration:none;font-weight:600}
+.cat .rel{font-size:14px;color:var(--ink-2)}
+.cat .rel b{color:var(--ink);font-weight:600}
+.cat.top .rel{font-size:16px}
+.cat .meta{display:flex;justify-content:space-between;gap:8px;margin-top:4px;font:12px "IBM Plex Mono",monospace;color:var(--muted)}
+.cat .meta a{color:var(--muted)}
+.cat.empty .co{color:var(--muted)}
+.cat.empty .body{gap:2px}
+@media (max-width:720px){.cat.top{grid-template-columns:1fr}.cat.top .ph{aspect-ratio:16/9}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="top"><a class="logo" href="index.html">x<b>rocket</b>.lol</a><ul><li><a href="graph.html">Map</a></li><li><a href="index.html#pricing">Pricing</a></li></ul><a class="btn hot" href="index.html#pricing">Start for €29</a></nav>
+<section style="padding-block:40px 0"><div class="eyebrow">The list · updated Oct 7, 2026</div>
+<h1 style="margin-top:10px;font-size:clamp(32px,4.6vw,54px)">Top 50 founder cats of X</h1>
+<p class="lede" style="margin-top:12px">Every company ships something. Every company deserves a cat. Each cat here is dressed as its company's latest release, ranked by how much the timeline talked about it.</p>
+<ol class="cats" id="cats"></ol>
+<p class="note" style="color:var(--muted);font-size:13px;margin-top:20px">Got a founder cat? DM <a href="https://x.com/chiefkittenme" style="color:var(--hot-ink)">@chiefkittenme</a> and claim an empty spot.</p>
+</section>
+<footer><div>© 2026 xrocket.lol</div><ul><li><a href="legal.html#imprint">Imprint</a></li><li><a href="legal.html#privacy">Privacy</a></li></ul></footer>
+</div>
+<script>
+// Edit this list. img: path under /cats (empty = "photo soon" placeholder).
+var CATS=[
+  {co:"Mistral AI",x:"MistralAI",founder:"arthurmensch",img:"cats/mistral.jpg",alt:"A chonky ginger cat walking past a giant orange pixel Mistral M in a museum",
+   rel:"<b>Mistral Large 4 “Le Chonk”</b>: 1.05T-parameter open-weight MoE, 49B active, 1M-token context. API preview now, weights due Oct 31.",
+   date:"Oct 6",src:"https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/"},
+  {co:"Reflection AI",x:"reflection_ai",founder:"MishaLaskin",
+   rel:"<b>Beam</b>: first open-weight model, 501B sparse MoE with 23B active.",
+   date:"Oct 6",src:"https://qz.com/reflection-ai-beam-open-weight-model-launch-100626"},
+  {co:"Perplexity",x:"perplexity_ai",founder:"AravSrinivas",
+   rel:"<b>Decider v1 27B</b>: open decision model (Apache 2.0) plus a $0.04/M Decisions API.",
+   date:"Oct 1",src:"https://benchlm.ai/models/pplx-decider-v1-27b"},
+  {co:"Cloudflare",x:"Cloudflare",founder:"eastdakota",
+   rel:"<b>Clef & Clef-flash</b>: decision models that return typed answers with probabilities.",
+   date:"Oct 1",src:"https://www.digitalapplied.com/blog/ai-model-releases-october-2026-tracker"},
+  {co:"Google DeepMind",x:"GoogleDeepMind",founder:"demishassabis",
+   rel:"<b>Gemini 4 Argon</b>: frontier model, rolling out to cyber defenders first.",
+   date:"Sep 30",src:"https://www.digitalapplied.com/blog/ai-model-releases-october-2026-tracker"},
+  {co:"OpenAI",x:"OpenAI",founder:"sama",
+   rel:"<b>GPT-6.1 Sol</b>: near-Astra coding and computer use at one-fifth the price.",
+   date:"Sep 29",src:"https://www.ithinkdiff.com/gpt-6-1-sol-launch-near-astra-intelligence-one-fifth-price/"}
+];
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});};
+var ol=document.getElementById('cats'),html='';
+for(var i=0;i<50;i++){
+  var c=CATS[i],n=i+1;
+  if(!c){
+    html+='<li class="cat empty"><div class="ph soon"><span class="rk">#'+n+'</span><span class="em">🐈</span></div><div class="body"><div class="co">Your cat here</div><div class="who">Spot open</div></div></li>';
+    continue;
+  }
+  var ph=c.img?'<img src="'+esc(c.img)+'" alt="'+esc(c.alt||c.co+' cat')+'"'+(n>1?' loading="lazy"':'')+'>':'<span class="em">🐈</span>';
+  html+='<li class="cat'+(n===1?' top':'')+'"><div class="ph'+(c.img?'':' soon')+'"><span class="rk">#'+n+'</span>'+ph+'</div>'+
+    '<div class="body"><div class="co">'+esc(c.co)+'</div>'+
+    '<div class="who"><a href="https://x.com/'+esc(c.x)+'" target="_blank" rel="noopener">@'+esc(c.x)+'</a> · founder <a href="https://x.com/'+esc(c.founder)+'" target="_blank" rel="noopener">@'+esc(c.founder)+'</a></div>'+
+    '<div class="rel">'+c.rel+'</div>'+
+    '<div class="meta"><span>'+esc(c.date)+(c.img?'':' · cat photo soon')+'</span><a href="'+esc(c.src)+'" target="_blank" rel="noopener">source ↗</a></div></div></li>';
+}
+ol.innerHTML=html;
+</script>
+</body>
+</html>
